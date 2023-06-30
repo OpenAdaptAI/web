@@ -1,10 +1,9 @@
 import Link from "next/link"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBoxOpen, faBrain } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "framer-motion"
 import Image from 'next/image';
 
 import EmailForm from '@components/EmailForm'
+import IndustriesGrid from '@components/IndustriesGrid'
 
 import styles from './MastHead.module.css'
 
@@ -33,33 +32,21 @@ export default function Home() {
                                       repeatDelay: 0,
                                     }}
                                 >
-                                    {/*
-                                    <FontAwesomeIcon icon={faBrain} className="text-5xl mb-2" />
-                                    <Image
-                                      className="hue-rotate-90 invert text-center inline absolute -ml-4 -mt-10"
-                                      priority
-                                      src="/images/favicon.svg"
-                                      height={64}
-                                      width={64}
-                                      alt="Large Language Model"
-                                    />
-                                    */}
                                     <Image
                                       className="invert text-center inline"
                                       priority
-                                      src="/images/favicon.svg"
-                                      height={64}
-                                      width={64}
+                                      src="/images/new_masthead.svg"
+                                      height={85}
+                                      width={85}
                                       alt="Large Language Model"
                                     />
                                 </motion.div>
-                                <FontAwesomeIcon icon={faBoxOpen} className="text-5xl" />
                             </div>
                             <h2 className="text-4xl my-10 font-extralight">
                                 AI for Humans.
                             </h2>
                             <div>
-                                <Link className="btn btn-primary ml-2 mt-2" href="#start">
+                                <Link className="btn btn-primary ml-2 mt-2" href="#industries">
                                     Get Started
                                 </Link>
                             </div>
@@ -102,6 +89,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <IndustriesGrid />
             {/*
       <Footer />
       */}
@@ -109,7 +97,7 @@ export default function Home() {
         <div className={styles.section}>
             <div className="relative flex items-center justify-center mb-2 mx-2 md-12">
                 <div className="grid grid-cols-1 break-words">
-                    <h2 id="start" className="text-2xl mt-10">Getting Started</h2>
+                    <h2 id="start" className="text-2xl mt-10">For Developers</h2>
                             <h3 className="mt-5"><b>Windows</b></h3>
                             <ul className="mt-2 list-disc list-inside">
                                 <li>Press Windows Key, type "powershell", and press Enter</li>
